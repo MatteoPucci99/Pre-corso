@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body{
+      display: flex;
+      margin: 0;
+      height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      width: 100%;
+    }
+
+    #main { 
+      width: 100%;
+    }
+
+    #content {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+     
+     
+    }
+
+    #sidebar {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .sidebar-icon {
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .sidebar-icon:hover {
+      border-radius: 5px;
+      background-color: rgb(245, 245, 245);
+      transition: 0.4s;
+    }
+
+
+    
+    .sidebar-icon p {
+      margin: 0;
+
+    }
+
+    .sidebar-icon ion-icon {
+      font-size: 1.5em;
+    }
+
+    #topbar {
+      height: 8vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    #logo {
+      height: 50%;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    #search {
+      display: flex;
+      height: 50%;
+    }
+
+    #topbar-icons {
+      display: flex;
+      cursor: pointer;
+      
+    }
+
+    .topbar-icon ion-icon {
+      font-size: 1.8em;
+      padding: 0 0.5em;
+      display: flex;
+      align-items: center;
+      height: 1.5em;
+    }
+
+    .topbar-icon {
+      transition: 0.4s;
+    }
+
+    .topbar-icon:hover {
+      border-radius: 5px;
+      background-color: rgb(245, 245, 245);
+    }
+
+    #mic {
+      font-size: 1.7em;
+      display: flex;
+      align-items: center;
+      padding: 0 0.5em;
+      cursor: pointer;
+      margin-left: 5px;
+      transition: 0.4s;
+    }
+
+    #mic:hover{
+      border-radius: 5px;
+      background-color: rgb(245, 245, 245);
+    }
+
+    #search-btn {
+      padding: 0 0.6em;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-top-right-radius: 40px ;
+      border-bottom-right-radius: 40px;
+      border-left: none;
+      width: 3em;
+      cursor: pointer;
+    }
+
+    #search-btn:hover {
+      background-color: rgb(233, 233, 233);
+    }
+
+    .img-container {
+      width: 42.5em;
+      margin: 3em;
+      height: 27em;
+
+    }
+
+    .epicode-img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .epicode-img:hover {
+      border-radius: 0;
+    }
+
+    .video-title {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .epi-logo {
+      width: 2.5em;
+      cursor: pointer;
+    }
+
+    #search input {
+      width: 30em;
+    }
+
+    .title h3, p {
+      margin: 0 0 0 10px;
+    }
+
+    #input-search{
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border-color: rgb(39, 39, 39);
+      border: 1px solid;
+      padding-left: 15px;
+    
+    }
+ 
+    
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="sidebar">
+    <div class="sidebar-icon">
+      <ion-icon name="menu-outline"></ion-icon>
+    </div>
+    <div class="sidebar-icon"> 
+       <ion-icon name="home-outline"></ion-icon>
+       <p>Home</p>
+    </div>
+    
+    <div class="sidebar-icon">
+      <ion-icon name="compass-outline"></ion-icon>
+      <p>Explore</p>
+    </div>
+   
+    <div class="sidebar-icon">
+      <ion-icon name="albums-outline"></ion-icon>
+      <p>Library</p>
+    </div>
+  </div>
+
+  <div id="main">
+
+    <div id="topbar">
+     <img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346829944_3429363167283928_6665451281053029420_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=0r9jnDUVg34AX9VJvk9&_nc_ht=scontent.fflr1-1.fna&oh=00_AfB_emCpkGQN7R7C2ZxIdtgmaKijgiGkqYCpEDSpD3ZQ1A&oe=648A0DB7" alt="yt-logo" id="logo">
+      <div id="search">
+        <input type="text" placeholder="Search on Youtube" id="input-search">
+
+        <button id="search-btn">
+          <ion-icon name="search-sharp"></ion-icon>
+        </button>
+
+        <div id="mic">
+          <ion-icon name="mic-outline"></ion-icon>
+        </div>
+
+      </div>
+
+      <div id="topbar-icons">
+
+        <div class="topbar-icon">
+          <ion-icon name="videocam-outline"></ion-icon>
+        </div>
+        <div class="topbar-icon">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </div>
+        <div class="topbar-icon">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="content"> 
+
+      <div class="img-container"><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346090848_3429394600614118_8964998194540092971_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=5xq9O0UN7P0AX8MsiEQ&_nc_ht=scontent.fflr1-1.fna&oh=00_AfD1q5tX-UC_ru7wS1O99pV_MQ6ZpFjlQSEoc_F5fS5JpA&oe=648A06B6" alt="" class="epicode-img">
+        <div class="video-title">
+          <div><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346073168_3429432000610378_4990263720589137569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=JHKjpKIV59UAX8gsZTy&_nc_ht=scontent.fflr1-1.fna&oh=00_AfC8f6tTCY456efN9VMWdc6GwH1uHva-0ZmfY0pms2uDoA&oe=6488C225" class="epi-logo" alt=""> </div>
+        
+          <div class="title">
+            <h3>Title</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-container"><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346090848_3429394600614118_8964998194540092971_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=5xq9O0UN7P0AX8MsiEQ&_nc_ht=scontent.fflr1-1.fna&oh=00_AfD1q5tX-UC_ru7wS1O99pV_MQ6ZpFjlQSEoc_F5fS5JpA&oe=648A06B6" alt="" class="epicode-img">
+
+        <div class="video-title">
+          <div><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346073168_3429432000610378_4990263720589137569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=JHKjpKIV59UAX8gsZTy&_nc_ht=scontent.fflr1-1.fna&oh=00_AfC8f6tTCY456efN9VMWdc6GwH1uHva-0ZmfY0pms2uDoA&oe=6488C225" class="epi-logo" alt=""> </div>
+        
+          <div class="title">
+            <h3>Title</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-container"><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346090848_3429394600614118_8964998194540092971_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=5xq9O0UN7P0AX8MsiEQ&_nc_ht=scontent.fflr1-1.fna&oh=00_AfD1q5tX-UC_ru7wS1O99pV_MQ6ZpFjlQSEoc_F5fS5JpA&oe=648A06B6" alt="" class="epicode-img">
+        <div class="video-title">
+          <div><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346073168_3429432000610378_4990263720589137569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=JHKjpKIV59UAX8gsZTy&_nc_ht=scontent.fflr1-1.fna&oh=00_AfC8f6tTCY456efN9VMWdc6GwH1uHva-0ZmfY0pms2uDoA&oe=6488C225" class="epi-logo" alt=""> </div>
+        
+          <div class="title">
+            <h3>Title</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-container"><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346090848_3429394600614118_8964998194540092971_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=5xq9O0UN7P0AX8MsiEQ&_nc_ht=scontent.fflr1-1.fna&oh=00_AfD1q5tX-UC_ru7wS1O99pV_MQ6ZpFjlQSEoc_F5fS5JpA&oe=648A06B6" alt="" class="epicode-img">
+        <div class="video-title">
+          <div><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346073168_3429432000610378_4990263720589137569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=JHKjpKIV59UAX8gsZTy&_nc_ht=scontent.fflr1-1.fna&oh=00_AfC8f6tTCY456efN9VMWdc6GwH1uHva-0ZmfY0pms2uDoA&oe=6488C225" class="epi-logo" alt=""> </div>
+        
+          <div class="title">
+            <h3>Title</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-container"><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346090848_3429394600614118_8964998194540092971_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=5xq9O0UN7P0AX8MsiEQ&_nc_ht=scontent.fflr1-1.fna&oh=00_AfD1q5tX-UC_ru7wS1O99pV_MQ6ZpFjlQSEoc_F5fS5JpA&oe=648A06B6" alt="" class="epicode-img">
+        <div class="video-title">
+          <div><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346073168_3429432000610378_4990263720589137569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=JHKjpKIV59UAX8gsZTy&_nc_ht=scontent.fflr1-1.fna&oh=00_AfC8f6tTCY456efN9VMWdc6GwH1uHva-0ZmfY0pms2uDoA&oe=6488C225" class="epi-logo" alt=""> </div>
+        
+          <div class="title">
+            <h3>Title</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-container"><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346090848_3429394600614118_8964998194540092971_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=5xq9O0UN7P0AX8MsiEQ&_nc_ht=scontent.fflr1-1.fna&oh=00_AfD1q5tX-UC_ru7wS1O99pV_MQ6ZpFjlQSEoc_F5fS5JpA&oe=648A06B6" alt="" class="epicode-img">
+        <div class="video-title">
+          <div><img src="https://scontent.fflr1-1.fna.fbcdn.net/v/t39.30808-6/346073168_3429432000610378_4990263720589137569_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=JHKjpKIV59UAX8gsZTy&_nc_ht=scontent.fflr1-1.fna&oh=00_AfC8f6tTCY456efN9VMWdc6GwH1uHva-0ZmfY0pms2uDoA&oe=6488C225" class="epi-logo" alt=""> </div>
+        
+          <div class="title">
+            <h3>Title</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
