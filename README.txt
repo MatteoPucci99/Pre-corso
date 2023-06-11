@@ -1,1 +1,1 @@
-Trovate tutto direttamente nei vari file.index, immagini e CSS :)
+Trovate tutto direttamente nei vari file index.html. Immagini e CSS inclusi :)
