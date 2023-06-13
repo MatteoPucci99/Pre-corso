@@ -1,1 +1,1 @@
-Trovate tutto direttamente nei vari file index.html. Immagini e CSS inclusi :)
+Per quanto riguarda le challenge trovate tutto direttamente nei vari file index.html :)
