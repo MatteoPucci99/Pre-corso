@@ -25,13 +25,135 @@ p {
     color: white;
     background: linear-gradient(90deg, rgb(16,16,35), rgb(25,33,85));
     align-items: center;
+    
+    
 }
+
 
 .drop-down-menù {
     display: flex;
     margin: 0 2em 0 20em;
     font-size: 0.8em;
     font-weight: bold;
+}
+
+#ddm-corsi {
+    position: absolute;
+    width: 43em;
+    background: linear-gradient(45deg, rgb(16,16,35), rgb(25,33,85) );
+    border: 1px solid white;
+    border-radius: 0.3em;
+    display: none;
+    padding: 1em 0.5em 1.5em 0.5em;
+    cursor: auto;
+    
+}
+
+#ddm-corsi h1 {
+    cursor: pointer;
+}
+
+.ddm-container {
+    cursor: pointer;
+}
+
+#corsi-on:hover #ddm-corsi {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+.corsi {
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(0deg, rgb(75, 17, 168), rgb(175, 0, 175), rgb(255, 66, 255) );
+    border-image-slice: 1;
+    font-size: 12px;
+}
+
+.corsi p {
+    font-style: italic;
+    margin-bottom: 1.5em;
+    margin-top: 0;
+    color: rgb(185, 185, 185);
+    font-weight: 300;
+}
+
+#ddm-corsi h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+}
+
+.h1-corsi {
+    margin-left: 2em;
+}
+
+#ddm-why-epi {
+    position: absolute;
+    width: 18em;
+    background: linear-gradient(45deg, rgb(16,16,35), rgb(25,33,85) );
+    border: 1px solid white;
+    border-radius: 0.3em;
+    padding: 1em 2em 1em 2.1em;
+    line-height: 1.5em;
+    display: none;
+
+}
+
+#why-epi:hover #ddm-why-epi{
+    display: block;
+}
+
+.ddm-container:hover ion-icon {
+    transform: rotate(180deg);
+}
+
+#ddm-why-epi p {
+    cursor: pointer;
+}
+
+#ddm-why-tech {
+    position: absolute;
+    width: 20em;
+    background: linear-gradient(45deg, rgb(16,16,35), rgb(25,33,85) );
+    border: 1px solid white;
+    border-radius: 0.3em;
+    padding: 1em 2em 1em 2.1em;
+    line-height: 1.5em;
+    display: none;
+
+}
+
+#why-tech p {
+    cursor: pointer;
+}
+
+#why-tech:hover #ddm-why-tech {
+    display: block;
+
+}
+
+#ddm-4company {
+    position: absolute;
+    width: 15em;
+    background: linear-gradient(45deg, rgb(16,16,35), rgb(25,33,85) );
+    border: 1px solid white;
+    border-radius: 0.3em;
+    padding: 1em 2em 1em 2.1em;
+    line-height: 1.5em;
+    display: none;
+}
+
+#ddm-4company p {
+    cursor: pointer;
+}
+
+#f-company:hover #ddm-4company {
+    display: block;
 }
 
 .ddm-container {
@@ -319,7 +441,7 @@ p {
     font-size: 40px;
 }
 
-#img-container-developer {
+#img-container-tizio {
     width: 34em;
     padding-top: 8em;
 }
